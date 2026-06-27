@@ -1,3 +1,14 @@
+<div align="center">
+  <h1>🏫 Licheng Town First Primary School</h1>
+  <p>
+    <a href="./README.md"><strong>English</strong></a> &nbsp;|&nbsp;
+    <a href="./README_zh.md"><strong>中文</strong></a> &nbsp;|&nbsp;
+    <a href="./README_ja.md"><strong>日本語</strong></a> &nbsp;|&nbsp;
+    <a href="./README_ru.md"><strong>Русский</strong></a>
+  </p>
+  <hr>
+</div>
+
 # 荔城镇第一小学 —— 让每一颗童心绽放光彩
 
 荔城镇第一小学（简称“荔城一小”）位于广西桂林荔浦市城区中心，是一所拥有**85余年**办学历史的优质公立小学。我们拥有两个校区，始终秉持“为学生的终身发展奠基”的信念，培育了一代又一代优秀学子。
