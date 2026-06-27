@@ -1,10 +1,10 @@
-<!-- 放在 README.md 开头 -->
 <div align="center">
   <h1>🏫 Licheng Town First Primary School</h1>
   <p>
     <a href="./README.md"><strong>English</strong></a> &nbsp;|&nbsp;
     <a href="./README_zh.md"><strong>中文</strong></a> &nbsp;|&nbsp;
-    <a href="./README_ja.md"><strong>日本語</strong></a>
+    <a href="./README_ja.md"><strong>日本語</strong></a> &nbsp;|&nbsp;
+    <a href="./README_ru.md"><strong>Русский</strong></a>
   </p>
   <hr>
 </div>
