@@ -1,6 +1,15 @@
-**Licheng Town First Primary School – Where Young Minds Blossom**
+<!-- 放在 README.md 开头 -->
+<div align="center">
+  <h1>🏫 Licheng Town First Primary School</h1>
+  <p>
+    <a href="./README.md"><strong>English</strong></a> &nbsp;|&nbsp;
+    <a href="./README_zh.md"><strong>中文</strong></a> &nbsp;|&nbsp;
+    <a href="./README_ja.md"><strong>日本語</strong></a>
+  </p>
+  <hr>
+</div>
 
-📖 [中文版本](./README_zh.md) | English version below
+**Licheng Town First Primary School – Where Young Minds Blossom**
 
 Located in the heart of Lipu City, Guilin, Guangxi, Licheng Town First Primary School (Licheng Yixiao) stands as a beacon of educational excellence with a proud history spanning over 85 years. From our two campuses, we have been nurturing generations of learners, building a legacy of knowledge, character, and innovation.
 
