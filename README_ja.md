@@ -1,3 +1,14 @@
+<div align="center">
+  <h1>🏫 Licheng Town First Primary School</h1>
+  <p>
+    <a href="./README.md"><strong>English</strong></a> &nbsp;|&nbsp;
+    <a href="./README_zh.md"><strong>中文</strong></a> &nbsp;|&nbsp;
+    <a href="./README_ja.md"><strong>日本語</strong></a> &nbsp;|&nbsp;
+    <a href="./README_ru.md"><strong>Русский</strong></a>
+  </p>
+  <hr>
+</div>
+
 # 荔城町第一小学校 – 若い心が花開く場所
 
 広西チワン族自治区桂林市荔浦市の中心に位置する荔城町第一小学校（略称：荔城一小）は、**85年以上**の歴史を持つ公立の名門小学校です。2つのキャンパスを有し、「子供たちの生涯発展の基礎を築く」という理念のもと、数え切れないほどの卒業生を世に送り出してきました。
