@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>荔浦市荔城镇第一小学</title>
     <style>
-        /* --- 全局样式 & CSS变量 --- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
         }
         body {
             font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Helvetica Neue', sans-serif;
@@ -27,7 +29,6 @@
             padding: 0 24px;
         }
 
-        /* --- 顶部语言导航栏 --- */
         .lang-bar {
             background-color: #1e293b;
             color: #94a3b8;
@@ -50,7 +51,6 @@
             color: #475569;
         }
 
-        /* --- 主导航 --- */
         .main-header {
             background-color: #ffffff;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -62,7 +62,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 72px;
+            min-height: 72px;
         }
         .logo {
             display: flex;
@@ -80,9 +80,10 @@
         }
         .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 28px;
             list-style: none;
             font-weight: 500;
+            flex-wrap: wrap;
         }
         .nav-links a {
             color: #334155;
@@ -106,7 +107,6 @@
             width: 100%;
         }
 
-        /* --- 轮播/Hero区域 --- */
         .hero {
             background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
             padding: 60px 0;
@@ -150,7 +150,6 @@
             border-color: #2563eb;
         }
 
-        /* --- 通用标题 --- */
         .section-title {
             text-align: center;
             font-size: 2rem;
@@ -165,7 +164,6 @@
             font-size: 1.05rem;
         }
 
-        /* --- 核心数据卡片 --- */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -191,7 +189,6 @@
             margin-top: 4px;
         }
 
-        /* --- 介绍与特色 --- */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -233,7 +230,43 @@
             font-weight: 700;
         }
 
-        /* --- 荣誉列表 --- */
+        .news-list,
+        .contact-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 20px 0 48px;
+        }
+        .news-item,
+        .contact-item {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .news-item .tag,
+        .contact-item .tag {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+        .news-item h3,
+        .contact-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .news-item p,
+        .contact-item p {
+            color: #475569;
+        }
+
         .honor-list {
             display: flex;
             flex-wrap: wrap;
@@ -265,7 +298,6 @@
             background: #1d4ed8;
         }
 
-        /* --- 页脚 --- */
         .footer {
             background-color: #0f172a;
             color: #94a3b8;
@@ -293,17 +325,14 @@
             margin-top: 8px;
         }
 
-        /* --- 响应式适配 --- */
         @media (max-width: 768px) {
             .main-header .container {
                 flex-direction: column;
-                height: auto;
                 padding: 16px 24px;
                 gap: 12px;
             }
             .nav-links {
-                gap: 20px;
-                flex-wrap: wrap;
+                gap: 12px 18px;
                 justify-content: center;
             }
             .hero h1 {
@@ -340,21 +369,18 @@
     </style>
 </head>
 <body>
-
-    <!-- ===== 顶部语言切换栏 ===== -->
     <div class="lang-bar">
         <div class="container">
-            <a href="#">🌐 English</a>
+            <a href="#home">🌐 English</a>
             <span class="divider">|</span>
-            <a href="#">中文</a>
+            <a href="#home">中文</a>
             <span class="divider">|</span>
-            <a href="#">日本語</a>
+            <a href="#home">日本語</a>
             <span class="divider">|</span>
-            <a href="#">Русский</a>
+            <a href="#home">Русский</a>
         </div>
     </div>
 
-    <!-- ===== 主导航 ===== -->
     <header class="main-header">
         <div class="container">
             <div class="logo">
@@ -362,18 +388,17 @@
                 荔城<span>一小</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">学校概况</a></li>
-                <li><a href="#">新闻动态</a></li>
-                <li><a href="#">教育教学</a></li>
-                <li><a href="#">师生风采</a></li>
-                <li><a href="#">联系我们</a></li>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">学校概况</a></li>
+                <li><a href="#news">新闻动态</a></li>
+                <li><a href="#education">教育教学</a></li>
+                <li><a href="#campus">师生风采</a></li>
+                <li><a href="#contact">联系我们</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- ===== Hero 区域 ===== -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <h1>荔浦市<span class="highlight">荔城镇第一小学</span></h1>
             <p>八十五载薪火相传 · 五育并举全面发展 · 国防教育示范校</p>
@@ -386,7 +411,6 @@
         </div>
     </section>
 
-    <!-- ===== 核心数据 ===== -->
     <div class="container">
         <div class="stats-grid">
             <div class="stat-card">
@@ -407,23 +431,22 @@
             </div>
             <div class="stat-card">
                 <div class="number">26,640</div>
-                <div class="label">校园面积 (m²)</div>
+                <div class="label">校园面积（m²）</div>
             </div>
         </div>
     </div>
 
-    <!-- ===== 学校介绍 + 办学特色 ===== -->
-    <div class="container">
+    <div class="container" id="about">
         <h2 class="section-title">关于我们</h2>
         <p class="section-subtitle">实验立校 · 科学管理 · 科研兴校</p>
 
         <div class="about-grid">
             <div class="about-text">
-                <p><strong>荔浦市荔城镇第一小学</strong> 位于广西桂林市荔浦市，拥有超过85年的建校历史[reference:0][reference:1]。学校现有新旧两个校区，校园面积26640平方米，校舍建筑面积约22840平方米[reference:2][reference:3]。</p>
-                <p>学校师资力量雄厚，现有教职工124人，学历合格率100%[reference:4]。教学设备先进，拥有多媒体互动教学网络、计算机网络、语音室、实验室、图书阅览室等，已达到自治区示范学校的要求[reference:5]。</p>
+                <p><strong>荔浦市荔城镇第一小学</strong> 位于广西桂林市荔浦市，是一所具有深厚文化底蕴和现代教育理念的学校。学校以“让每一颗童心绽放光彩”为目标，致力于培养德智体美劳全面发展的新时代小学生。</p>
+                <p>学校注重教育质量提升，积极推进素质教育与信息化教学深度融合，落实立德树人根本任务，努力构建充满活力、创新与温度的校园文化。</p>
                 <div class="highlight-box">
-                    <strong>🏛️ 办学方针：</strong> 实验立校、科学管理、科研兴校[reference:6][reference:7]<br>
-                    <strong>🎯 办学思路：</strong> 以素质教育为总体目标，强化学校管理；以教学科研为先导，提高教师业务素质；以多媒体教学为突破口，锤炼学生整体素质[reference:8][reference:9]。
+                    <strong>🏛️ 办学方针：</strong> 实验立校、科学管理、科研兴校<br>
+                    <strong>🎯 办学思路：</strong> 以素质教育为总体目标，强化学校管理；以教学科研为先导，提高教师业务素质；以多媒体教学为突破，促进教育创新发展。
                 </div>
             </div>
             <ul class="feature-list">
@@ -437,34 +460,97 @@
         </div>
     </div>
 
-    <!-- ===== 荣誉奖项 ===== -->
-    <div class="container">
-        <h2 class="section-title">荣誉奖项</h2>
-        <p class="section-subtitle">一份份荣誉，见证着我们坚实的每一步</p>
-        <div class="honor-list">
-            <span class="tag special">🇨🇳 全国国防教育示范学校（2023）[reference:10][reference:11]</span>
-            <span class="tag">🌿 国际生态学校绿旗荣誉[reference:12][reference:13]</span>
-            <span class="tag">💻 广西现代教育技术实验学校[reference:14][reference:15]</span>
-            <span class="tag">🧪 广西创新教育实验学校[reference:16][reference:17]</span>
-            <span class="tag">📖 广西活动课程实验学校[reference:18][reference:19]</span>
-            <span class="tag">🎥 广西电教实验学校[reference:20][reference:21]</span>
-            <span class="tag">🏓 自治区乒乓球传统项目学校[reference:22][reference:23]</span>
-            <span class="tag">📊 桂林市教育科研示范学校[reference:24][reference:25]</span>
-            <span class="tag">🎭 桂林市艺术教育示范学校[reference:26][reference:27]</span>
+    <div class="container" id="news">
+        <h2 class="section-title">新闻动态</h2>
+        <p class="section-subtitle">关注校园最新风采，见证每一份成长与进步</p>
+        <div class="news-list">
+            <article class="news-item">
+                <span class="tag">校园要闻</span>
+                <h3>校园文化节精彩启幕</h3>
+                <p>师生共同参与文艺展示、科技活动和校园实践项目，营造浓厚学习氛围。</p>
+            </article>
+            <article class="news-item">
+                <span class="tag">教学科研</span>
+                <h3>课堂改革推进培训活动</h3>
+                <p>教师开展主题研究，聚焦课程设计、课堂组织和评价方式的优化提升。</p>
+            </article>
+            <article class="news-item">
+                <span class="tag">德育活动</span>
+                <h3>劳动教育实践活动丰富开展</h3>
+                <p>学生走进校园劳动实践，增强责任意识与动手能力，形成良好品格。</p>
+            </article>
         </div>
     </div>
 
-    <!-- ===== 页脚 ===== -->
+    <div class="container" id="education">
+        <h2 class="section-title">教育教学</h2>
+        <p class="section-subtitle">以学生发展为中心，促进全面成长与个性发展</p>
+        <div class="news-list">
+            <div class="news-item">
+                <span class="tag">课程建设</span>
+                <h3>校本课程扎实推进</h3>
+                <p>根据校情与地方特色，合理开发德育、艺术、劳动和科技等优质课程。</p>
+            </div>
+            <div class="news-item">
+                <span class="tag">课堂实践</span>
+                <h3>项目式学习深度开展</h3>
+                <p>围绕真实问题构建教学情境，提升学生的问题发现与解决能力。</p>
+            </div>
+            <div class="news-item">
+                <span class="tag">教师发展</span>
+                <h3>专业成长持续提升</h3>
+                <p>通过培训、研讨和教研活动，促进教师队伍整体素养不断提升。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="campus">
+        <h2 class="section-title">师生风采</h2>
+        <p class="section-subtitle">在多彩实践中成长，在凝聚力量中成就更好的自己</p>
+        <div class="honor-list">
+            <span class="tag special">🇨🇳 全国国防教育示范学校</span>
+            <span class="tag">🌿 国际生态学校绿旗荣誉</span>
+            <span class="tag">💻 广西现代教育技术实验学校</span>
+            <span class="tag">🧪 广西创新教育实验学校</span>
+            <span class="tag">📖 广西活动课程实验学校</span>
+            <span class="tag">🎥 广西电教实验学校</span>
+            <span class="tag">🏓 自治区乒乓球传统项目学校</span>
+            <span class="tag">📊 桂林市教育科研示范学校</span>
+            <span class="tag">🎭 桂林市艺术教育示范学校</span>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <h2 class="section-title">联系我们</h2>
+        <p class="section-subtitle">欢迎来校交流，携手共建美好教育未来</p>
+        <div class="contact-list">
+            <div class="contact-item">
+                <span class="tag">校址</span>
+                <h3>学校地址</h3>
+                <p>广西壮族自治区桂林市荔浦市荔城镇城北街1号</p>
+            </div>
+            <div class="contact-item">
+                <span class="tag">电话</span>
+                <h3>联系电话</h3>
+                <p>0773-7212673</p>
+            </div>
+            <div class="contact-item">
+                <span class="tag">邮编</span>
+                <h3>邮政编码</h3>
+                <p>546600</p>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <div class="school-name">🏫 荔浦市荔城镇第一小学</div>
-            <div class="address">📍 地址：广西壮族自治区桂林市荔浦市荔城镇城北街1号[reference:28][reference:29]</div>
-            <div class="address">📞 电话：0773-7212673[reference:30][reference:31] ｜ 邮编：546600[reference:32]</div>
+            <div class="address">📍 地址：广西壮族自治区桂林市荔浦市荔城镇城北街1号</div>
+            <div class="address">📞 电话：0773-7212673 ｜ 邮编：546600</div>
             <div class="copyright">
                 © 2026 荔城镇第一小学 · 让每一颗童心绽放光彩
             </div>
         </div>
     </footer>
-
 </body>
 </html>
